@@ -1,6 +1,7 @@
 #include "Medidor.h"
 #include <MHZ19_uart.h>     
 #include <LiquidCrystal_I2C.h>
+#include <Wire.h> 
 
 MHZ19_uart sensor;
 LiquidCrystal_I2C display(0x27,16,2);  
