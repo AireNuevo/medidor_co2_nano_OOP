@@ -84,7 +84,7 @@ void Medidor::sensarCO2() {
   else if(co2ppm >= 600) {
     rgb('y');
   }
-  else if(co2ppm < 800) {
+  else if(co2ppm < 600) {
     rgb('g');
   }
   scrollAireNuevo();

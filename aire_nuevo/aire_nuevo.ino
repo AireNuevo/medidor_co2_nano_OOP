@@ -11,7 +11,7 @@ void setup() {
 
 void loop() {
   medidor.verificarEstadoPulsador();
-  if(loops % 30 == 0) {
+  if(loops == 30) {
     medidor.presentarMedidor();
     loops = 0;
   } 
