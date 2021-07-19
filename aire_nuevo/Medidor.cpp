@@ -1,4 +1,4 @@
-#include "Medidor.h"
+ #include "Medidor.h"
 #include <MHZ19_uart.h>     
 #include <LiquidCrystal_I2C.h>
 #include <Wire.h> 
@@ -14,7 +14,7 @@ Medidor::Medidor(void) {
   ledB_pin = 2;
   buzzer_pin = 7;
   pulsador_pin = 8;
-  numero_de_serie = "0581 "; // #0581 -> ultima cargada 
+  numero_de_serie = "0872"; // #0872 -> ultima cargada // #0873 a 880 -> placas cargadas con error
 }
 
 void Medidor::iniciar() {
