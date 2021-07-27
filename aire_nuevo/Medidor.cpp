@@ -14,7 +14,7 @@ Medidor::Medidor(void) {
   ledB_pin = 2;
   buzzer_pin = 7;
   pulsador_pin = 8;
-  numero_de_serie = "0872"; // #0872 -> ultima cargada // #0873 a 880 -> placas cargadas con error
+  numero_de_serie = "0950"; // #0950 -> ultima cargada 
 }
 
 void Medidor::iniciar() {
