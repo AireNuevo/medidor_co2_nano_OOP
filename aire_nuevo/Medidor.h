@@ -19,7 +19,7 @@ private:
   byte pulsador_pin;
   String numero_de_serie;
   
-  char str_to_print[STR_LEN]={'A','i','r','e',' ','N','u','e','v','o'}; 
+  char str_to_print[STR_LEN]={'V','e','n','t','i','l','a','r',' ',' '}; 
   void displayPrint(int posicion, int linea, String texto);
   void scrollingText(uint8_t scrolled_by);
   
@@ -27,7 +27,7 @@ public:
   Medidor(void);
   void imprimirCO2(int co2ppm);
   void logoUNAHUR();
-  void scrollAireNuevo();
+  void scrollVentilar();
   void calibrar();
   void rgb(char color);
   void sonarAlarma(int duracionNota);

@@ -1,4 +1,4 @@
- #include "Medidor.h"
+#include "Medidor.h"
 #include <MHZ19_uart.h>     
 #include <LiquidCrystal_I2C.h>
 #include <Wire.h> 
@@ -14,7 +14,7 @@ Medidor::Medidor(void) {
   ledB_pin = 2;
   buzzer_pin = 7;
   pulsador_pin = 8;
-  numero_de_serie = "1057"; // #1057 -> ultima cargada 
+  numero_de_serie = "0834"; // #1057 -> ultima cargada 
 }
 
 void Medidor::iniciar() {
@@ -58,17 +58,17 @@ void Medidor::verificarEstadoPulsador() {
 }
 
 void Medidor::presentarMedidor() {
-  Serial.print("AireNuevo UNAHUR \n"); 
+  Serial.print("Ventilar \n"); 
   Serial.print("MEDIDOR de CO2 \n");  
   display.clear();
-  displayPrint(0, 0, "AireNuevo UNAHUR");     
+  displayPrint(0, 0, "Ventilar");     
   displayPrint(0, 1, "MEDIDOR de CO2");       
   delay(5000);
 }
 
 void Medidor::sensarCO2() {
   display.clear();
-  displayPrint(0, 0, "Aire Nuevo");
+  displayPrint(0, 0, "Ventilar");
   while(sensor.getPPM() >= 1200) {  
     alarmaCO2(1, 250);                             
     imprimirCO2(sensor.getPPM());
@@ -87,7 +87,7 @@ void Medidor::sensarCO2() {
   else if(co2ppm < 600) {
     rgb('g');
   }
-  scrollAireNuevo();
+  scrollVentilar();
   delay(5000);  
 }
 
@@ -162,7 +162,7 @@ void Medidor::scrollingText(uint8_t scrolled_by) {
   }
 }
 
-void Medidor::scrollAireNuevo() {
+void Medidor::scrollVentilar() {
   for (uint8_t i=0;i<STR_LEN;i++) {
     scrollingText(i);
     delay(500);
