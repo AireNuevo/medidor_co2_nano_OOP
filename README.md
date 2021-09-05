@@ -1,4 +1,10 @@
-﻿# Medidor de CO2 V3.2 - Arduino Nano usando OOP
+La versión "Ventilar" se encuentra en la branch de su mismo nombre. Para acceder a ella basta con clonar el repositorio y pasarse a la branch correspondiente, para esto pueden hacer 
+```
+git checkout ventilar
+```
+desde la consola en la carpeta del repositorio.
+
+# Medidor de CO2 V3.2 - Arduino Nano usando OOP
 Esta es la versión 3.2 del medidor de CO2 con una placa Arduino Nano utilizando un display I2C, un sensor MH-Z19C, un led RGB y un buzzer. En esta versión se implementó el paradigma de programación orientada a objetos para el modelado del medidor.
 
 ### Pinout de la Arduino Nano
